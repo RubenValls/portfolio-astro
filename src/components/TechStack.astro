@@ -1,0 +1,32 @@
+---
+import StackCards from "./StackCards.astro";
+
+---
+
+<div class="techstack-container">
+    <h2 class="techstack-title">Technology Stack</h2>
+    <div class="techstack-grid">
+        <StackCards/>
+    </div>
+</div>
+
+
+<style>
+	.techstack-container{
+        width: 100%;
+        text-align: center
+    }
+
+    .techstack-title{
+        color: #F5F5F5;
+    }
+
+    .techstack-grid{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        padding-top: 20px;
+    }
+</style>

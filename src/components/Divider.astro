@@ -1,45 +1,49 @@
 ---
 import IndexBanner from "./IndexBanner.astro";
+import TechStack from "./TechStack.astro";
 
 export interface Props {
-	divider: string;
-	segment: string;
+  divider: string;
+  segment: string;
 }
 
-const { divider, segment } : Props = Astro.props;
-
+const { divider, segment }: Props = Astro.props;
 ---
 
 <div class={segment}>
-    {divider==='divider1' ? <IndexBanner /> : null}
+  {divider === "divider1" 
+    ? <IndexBanner /> 
+    : (divider === "divider2")
+      ? <TechStack/>
+      : null
+  }
 </div>
 <svg class={divider} viewBox="0 0 100 100" preserveAspectRatio="none">
   <path d="M0 0 L50 100 L100 0 Z"></path>
 </svg>
 
-
 <style>
-	@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
 
-    .divider1 {
+  .divider1 {
     margin-top: 0 !important;
     width: 100%;
     height: 10vh;
     fill: #f5f5f5;
-    }
-    .segment1 {
+  }
+  .segment1 {
     height: 25vh;
     background: linear-gradient(#bdbdbd, #f5f5f5);
-    }
+  }
 
-    .divider2 {
+  .divider2 {
     width: 100%;
     height: 10vh;
-    fill: #BEBEBE;
-    }
-    .segment2 {
+    fill: #bebebe;
+  }
+  .segment2 {
     margin-top: 25px;
-    height: 35vh;
-    background: linear-gradient(#282828, #BEBEBE);
-    }
+    height: auto;
+    background: linear-gradient(#282828, #bebebe);
+  }
 </style>

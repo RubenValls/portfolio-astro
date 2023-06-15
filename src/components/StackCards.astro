@@ -1,0 +1,115 @@
+---
+
+const stacks = [
+    {
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        title: "HTML5"
+    },
+    {
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        title: "CSS3"
+    },
+    {
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+        title: "Bootstrap"
+    },
+    {
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        title: "GIT"
+    },
+    {
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        title: "JavaScript"
+    },
+    {
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        title: "TypeScript"
+    },
+    {
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        title: "React"
+    },
+    {
+        img: "https://img.icons8.com/?size=512&id=r9QJ0VFFrn7T&format=png",
+        title: "ChakraUI"
+    },
+    {
+        img: "https://www.svgrepo.com/show/354202/postman-icon.svg",
+        title: "Postman"
+    },
+    {
+        img: "https://www.svgrepo.com/show/373446/astro.svg",
+        title: "Astro"
+    },
+    {
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
+        title: "Sass"
+    },
+    {
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        title: "NodeJs"
+    },
+    {
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg",
+        title: "Java"
+    },
+    {
+        img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+        title: "PHP"
+    },
+]
+
+---
+
+{
+    stacks.map((stack) => {
+        return(<figure style="--c:#ffff">
+            <img src={stack.img} />    
+            <figcaption>{stack.title}</figcaption>
+        </figure>)
+    })
+}
+
+
+<style>
+    figure {
+        border-radius: 1rem;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    figure img{
+        height: 150px;
+        width: auto;
+    }
+    figure > * {
+        grid-area: 1/1;
+        transition: 0.5s;
+    }
+    figure figcaption {
+        display: grid;
+        align-items: end;
+        font-family: sans-serif;
+        font-size: 2.3rem;
+        font-weight: bold;
+        color: #0000;
+        padding: 0.75rem;
+        background: var(--c, #0009);
+        clip-path: inset(0 var(--_i, 100%) 0 0);
+        -webkit-mask: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        -webkit-mask-clip: text, padding-box;
+        margin: -1px;
+    }
+    figure:hover figcaption {
+        --_i: 0%;
+    }
+    figure:hover img {
+        transform: scale(1.2);
+    }
+    @supports not (-webkit-mask-clip: text) {
+        figure figcaption {
+            -webkit-mask: none;
+            color: #fff;
+        }
+    }
+</style>
