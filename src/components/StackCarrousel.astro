@@ -61,55 +61,78 @@ const stacks = [
 
 ---
 
-{
-    stacks.map((stack) => {
-        return(<figure style="--c:#ffff">
-            <img src={stack.img} />    
-            <figcaption>{stack.title}</figcaption>
-        </figure>)
-    })
-    
-}
+<div class="slider">
+	<div class="slide-track">
+        {
+            stacks.map((stack) => {
+                return(
+                    <div class="slide">
+                        <img src={stack.img} height="100" width="100" alt={stack.title} />
+                    </div>
+                )
+            })
+        }
+	</div>
+</div>
 
 <style>
-    figure {
-        border-radius: 1rem;
-        overflow: hidden;
-        cursor: pointer;
-    }
-    figure img{
-        height: 150px;
-        width: auto;
-    }
-    figure > * {
-        grid-area: 1/1;
-        transition: 0.5s;
-    }
-    figure figcaption {
-        display: grid;
-        align-items: end;
-        font-family: sans-serif;
-        font-size: 2.3rem;
-        font-weight: bold;
-        color: #0000;
-        padding: 0.75rem;
-        background: var(--c, #0009);
-        clip-path: inset(0 var(--_i, 100%) 0 0);
-        -webkit-mask: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
-        -webkit-mask-composite: xor;
-        -webkit-mask-clip: text, padding-box;
-        margin: -1px;
-    }
-    figure:hover figcaption {
-        --_i: 0%;
-    }
-    figure:hover img {
-        transform: scale(1.2);
-    }
-    @supports not (-webkit-mask-clip: text) {
-        figure figcaption {
-            -webkit-mask: none;
-            color: #fff;
-        }
-    }
+
+@-webkit-keyframes scroll {
+    0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(-250px * 6));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(-250px * 6));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.slider::before, .slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 13);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
 </style>
