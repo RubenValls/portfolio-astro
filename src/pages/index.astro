@@ -1,26 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import IndexBanner from '../components/IndexBanner.astro';
 import Divider from '../components/Divider.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<IndexBanner/>
-		<Divider/>
+		<Divider divider='divider1' segment='segment1'/>
+		<Divider divider='divider2' segment='segment2'/>
+		<Divider divider='divider2' segment='segment2'/>
 	</main>
 </Layout>
 
 <style>
 	body{
-		background-color: rgba(25, 25, 25, 0.9);
+		background-color: rgb(40, 40, 40);
 		height: 100vh;
 		margin: 0;
-	}
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		color: white;
 	}
 </style>

@@ -4,19 +4,22 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
 
+
 <h1 aria-label="Hi! I'm Rubén Valls">
-  Hi! I'm &nbsp;<span class="typewriter"></span>
+  Hi! I'm&nbsp;<span class="typewriter"></span>
 </h1>
 
 
 <style>
+
 	h1 {
-  font-size: 10vmin;
-  color: rgb(255, 255, 255);
-  text-align: left;
-  font-family: Lato, sans-serif;
-  font-weight: 700;
-  margin: 1rem 0 1rem 2rem;
+        font-size: 10vmin;
+        color: rgb(40, 40, 40);
+        text-align: center;
+        font-family: Lato, sans-serif;
+        font-weight: 700;
+        margin: 0;
+        padding-top: 20px;
 }
 
 /* Typewriter effect 1 */
@@ -80,22 +83,4 @@
   border-right: 0;
 }
 
-
-@media (prefers-reduced-motion) {
-  .typewriter::after {
-    animation: none;
-  }
-  
-  @keyframes sequencePopup {
-    0%, 100% { content: "developer"; }
-    25% { content: "writer"; }
-    50% { content: "reader"; }
-    75% { content: "human"; }
-  }
-
-  .typewriter::before {
-    content: "developer";
-    animation: sequencePopup 12s linear infinite;
-  }
-}
 </style>
