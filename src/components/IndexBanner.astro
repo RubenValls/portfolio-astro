@@ -1,0 +1,101 @@
+---
+
+---
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+<h1 aria-label="Hi! I'm Rubén Valls">
+  Hi! I'm &nbsp;<span class="typewriter"></span>
+</h1>
+
+
+<style>
+	h1 {
+  font-size: 10vmin;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  margin: 1rem 0 1rem 2rem;
+}
+
+/* Typewriter effect 1 */
+@keyframes typing {
+  0.0000%, 50.0930% { content: ""; }
+  3.1395%, 49.0930% { content: "R"; }
+  5.2791%, 47.0930% { content: "Ru"; }
+  7.4186%, 45.0930% { content: "Rub"; }
+  9.5581%, 43.2326% { content: "Rubé"; }
+  11.6977%, 41.3721% { content: "Rubén"; }
+  13.8372%, 39.5116% { content: "Rubén "; }
+  15.9767%, 37.6512% { content: "Rubén V"; }
+  17.1163%, 35.7907% { content: "Rubén Va"; }
+  19.2558%, 33.9302% { content: "Rubén Val"; }
+  21.2558%, 31.0698% { content: "Rubén Vall"; }
+  23.2558%, 29.2093% { content: "Rubén Valls"; }
+  25.2558%, 27.3488% { content: "Rubén Valls."; }
+
+  52.7674%, 100% { content: ""; }
+  54.9070%, 99.0% { content: "W"; }
+  56.0465%, 97.4419% { content: "Web"; }
+  58.1860%, 96.4419% { content: "Web "; }
+  60.3256%, 94.4419% { content: "Web D"; }
+  62.4651%, 93.4419% { content: "Web De"; }
+  64.6047%, 91.4419% { content: "Web Dev"; }
+  66.6047%, 90.4419% { content: "Web Deve"; }
+  68.6047%, 89.5814% { content: "Web Devel"; }
+  70.6047%, 87.7209% { content: "Web Develo"; }
+  72.6047%, 85.8605% { content: "Web Develop"; }
+  74.6047%, 83.0000% { content: "Web Develope"; }
+  75.6047%, 81.1395% { content: "Web Developer"; }
+  77.6047%, 79.2791% { content: "Web Developer."; }
+  
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+  
+  @keyframes sequencePopup {
+    0%, 100% { content: "developer"; }
+    25% { content: "writer"; }
+    50% { content: "reader"; }
+    75% { content: "human"; }
+  }
+
+  .typewriter::before {
+    content: "developer";
+    animation: sequencePopup 12s linear infinite;
+  }
+}
+</style>

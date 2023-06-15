@@ -5,7 +5,7 @@ export interface Props {
 	href: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body } : Props = Astro.props;
 ---
 
 <li class="link-card">
@@ -19,6 +19,8 @@ const { href, title, body } = Astro.props;
 		</p>
 	</a>
 </li>
+
+
 <style>
 	.link-card {
 		list-style: none;
