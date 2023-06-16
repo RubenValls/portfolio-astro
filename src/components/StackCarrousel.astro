@@ -1,138 +1,141 @@
 ---
-
 const stacks = [
     {
         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-        title: "HTML5"
+        title: "HTML5",
     },
     {
         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-        title: "CSS3"
+        title: "CSS3",
     },
     {
         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-        title: "Bootstrap"
+        title: "Bootstrap",
     },
     {
         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-        title: "GIT"
+        title: "GIT",
     },
     {
         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-        title: "JavaScript"
+        title: "JavaScript",
     },
     {
         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-        title: "TypeScript"
+        title: "TypeScript",
     },
     {
         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        title: "React"
+        title: "React",
     },
     {
         img: "https://img.icons8.com/?size=512&id=r9QJ0VFFrn7T&format=png",
-        title: "ChakraUI"
+        title: "ChakraUI",
     },
     {
         img: "https://www.svgrepo.com/show/354202/postman-icon.svg",
-        title: "Postman"
+        title: "Postman",
     },
     {
         img: "https://www.svgrepo.com/show/373446/astro.svg",
-        title: "Astro"
+        title: "Astro",
     },
     {
         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-        title: "Sass"
+        title: "Sass",
     },
     {
         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-        title: "NodeJs"
+        title: "NodeJs",
     },
     {
         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg",
-        title: "Java"
+        title: "Java",
     },
     {
         img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-        title: "PHP"
+        title: "PHP",
     },
-]
-
+];
 ---
 
 <div class="slider">
-	<div class="slide-track">
+    <div class="slide-track">
         {
             stacks.map((stack) => {
-                return(
+                return (
                     <div class="slide">
-                        <img src={stack.img} height="100" width="100" alt={stack.title} />
+                        <img
+                            src={stack.img}
+                            height="100"
+                            width="100"
+                            alt={stack.title}
+                        />
                     </div>
-                )
+                );
             })
         }
-	</div>
+    </div>
 </div>
 
 <style>
+    @-webkit-keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(calc(-250px * 6));
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
 
-@-webkit-keyframes scroll {
-    0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(calc(-250px * 6));
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(calc(-250px * 6));
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.slider {
-  height: 100px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  width: 100vw;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.slider::before, .slider::after {
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
-.slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-.slider::before {
-  left: 0;
-  top: 0;
-}
-.slider .slide-track {
-  -webkit-animation: scroll 40s linear infinite;
-          animation: scroll 40s linear infinite;
-  display: flex;
-  width: calc(250px * 13);
-}
-.slider .slide {
-  height: 100px;
-  width: 250px;
-}
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(calc(-250px * 6));
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    .slider {
+        height: 100px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .slider::before,
+    .slider::after {
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+    }
+    .slider::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+    .slider::before {
+        left: 0;
+        top: 0;
+    }
+    .slider .slide-track {
+        -webkit-animation: scroll 40s linear infinite;
+        animation: scroll 40s linear infinite;
+        display: flex;
+        width: calc(250px * 13);
+    }
+    .slider .slide {
+        height: 100px;
+        width: 250px;
+    }
 </style>
