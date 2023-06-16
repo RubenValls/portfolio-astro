@@ -1,4 +1,5 @@
 ---
+import image from '../assets/profileImg.png'
 ---
 
 <link
@@ -11,6 +12,9 @@
     <h1 aria-label="Hi! I'm Rubén Valls">
       Hi! I'm&nbsp;<span class="typewriter"></span>
     </h1>
+  </div>
+  <div class="profileImage-container">
+    <img src={image} id="profileImage" alt="RubénValls"/>
   </div>
   <div>
     <div class="social-buttons">
@@ -64,6 +68,21 @@
     padding-top: 50px;
   }
 
+  .profileImage-container{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  #profileImage {
+    width: 30%;
+  }
+
+  @media only screen and (max-width: 1200px) {
+  #profileImage {
+    width: 80%;
+  }
+}
+
   h1 {
     font-size: 10vmin;
     color: whitesmoke;
@@ -71,7 +90,7 @@
     font-family: Lato, sans-serif;
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   /* Typewriter effect 1 */
