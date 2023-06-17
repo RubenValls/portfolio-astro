@@ -1,9 +1,12 @@
 ---
 import StackCarrousel from "./StackCarrousel.astro";
+import titleImg from "../assets/techStackTitle.png"
 ---
 
 <div class="techstack-container">
-    <h1 class="techstack-title">Technology Stack</h1>
+    <div class="techstack-title">
+        <img src={titleImg} alt="techStackTitle" width="400px"/>
+    </div>
     <StackCarrousel/>
 </div>
 
@@ -15,9 +18,8 @@ import StackCarrousel from "./StackCarrousel.astro";
     }
 
     .techstack-title{
-        padding-top: 20px;
-        color: #333333;
-        margin: 0 !important;
+        padding-top: 15px;
+        width: 100%;
     }
 
     .techstack-grid{

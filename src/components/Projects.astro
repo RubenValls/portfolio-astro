@@ -5,6 +5,7 @@ import usersImg from "../assets/usersAppProject.png";
 import githubImg from "../assets/githubIcon.png";
 import mobxImg from "../assets/mobxProject.png";
 import weatherImg from "../assets/weatherProject.png";
+import titleImg from "../assets/projectsTitle.png";
 
 const projects = [
     {
@@ -51,7 +52,9 @@ const projects = [
 ---
 
 <div class="projects-container">
-    <h1>Projects</h1>
+    <div class="projects-title">
+        <img src={titleImg} alt="techStackTitle" width="400px"/>
+    </div>
     <section class="articles">
         {
             projects.map((project) => {
@@ -99,7 +102,14 @@ const projects = [
 
 <style>
     .projects-container {
+        width: 100%;
         text-align: center;
+    }
+
+    .projects-title{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 100%;
     }
     article {
         --img-scale: 1.001;
