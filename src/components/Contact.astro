@@ -129,8 +129,16 @@ import titleImg from "../assets/knowMoreTitle.png";
         right: 20px;
         bottom: 0;
         border-radius: 15px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         z-index: -1;
+    }
+
+    .screen:hover {
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.75);
+        transition: 1s;
+    }
+
+    .screen:not(:hover) {
+        transition: 1s;
     }
 
     .screen-header {
