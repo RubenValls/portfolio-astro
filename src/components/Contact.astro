@@ -3,7 +3,7 @@ import titleImg from "../assets/knowMoreTitle.png";
 ---
 <div class="contacttitle-container">
     <div class="contact-title">
-        <img src={titleImg} alt="techStackTitle" width="350px"/>
+        <img src={titleImg} alt="techStackTitle" id="titleImg"/>
     </div>
 </div>
 <div class="contact-container">
@@ -83,6 +83,17 @@ import titleImg from "../assets/knowMoreTitle.png";
         padding-top: 50px;
         width: 100%;
     }
+
+    #titleImg {
+        width: 40%;
+    }
+
+    @media only screen and (max-width: 800px) {
+        #titleImg {
+            width: 90%;
+        }
+    }
+    
     .contact-container {
         margin-top: 20px;
         text-align: center;

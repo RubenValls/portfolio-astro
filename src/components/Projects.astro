@@ -53,7 +53,7 @@ const projects = [
 
 <div class="projects-container">
     <div class="projects-title">
-        <img src={titleImg} alt="techStackTitle" width="350px"/>
+        <img src={titleImg} alt="techStackTitle" id="titleImg" />
     </div>
     <section class="articles">
         {
@@ -89,11 +89,11 @@ const projects = [
                         'More projects are available at my GitHub repository.
                         Check it out.'
                     </p>
-                        <button class="button-35" role="button">
-                            <a href="https://github.com/RubenValls" target="_blank">
-                                Visit Github
-                            </a>
-                        </button>
+                    <button class="button-35" role="button">
+                        <a href="https://github.com/RubenValls" target="_blank">
+                            Visit Github
+                        </a>
+                    </button>
                 </div>
             </div>
         </article>
@@ -106,10 +106,20 @@ const projects = [
         text-align: center;
     }
 
-    .projects-title{
+    .projects-title {
         padding-top: 15px;
         padding-bottom: 15px;
         width: 100%;
+    }
+
+    #titleImg {
+        width: 40%;
+    }
+
+    @media only screen and (max-width: 800px) {
+        #titleImg {
+            width: 90%;
+        }
     }
     article {
         --img-scale: 1.001;
@@ -162,7 +172,7 @@ const projects = [
 
     .article-body p {
         height: 80px;
-    } 
+    }
 
     article a {
         display: inline-flex;

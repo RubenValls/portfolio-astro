@@ -1,28 +1,37 @@
 ---
 import StackCarrousel from "./StackCarrousel.astro";
-import titleImg from "../assets/techStackTitle.png"
+import titleImg from "../assets/techStackTitle.png";
 ---
 
 <div class="techstack-container">
     <div class="techstack-title">
-        <img src={titleImg} alt="techStackTitle" width="350px"/>
+        <img src={titleImg} alt="techStackTitle" id="titleImg" />
     </div>
-    <StackCarrousel/>
+    <StackCarrousel />
 </div>
 
-
 <style>
-	.techstack-container{
+    .techstack-container {
         width: 100%;
         text-align: center;
     }
 
-    .techstack-title{
+    .techstack-title {
         padding-top: 15px;
         width: 100%;
     }
 
-    .techstack-grid{
+    #titleImg {
+        width: 40%;
+    }
+
+    @media only screen and (max-width: 800px) {
+        #titleImg {
+            width: 90%;
+        }
+    }
+
+    .techstack-grid {
         display: grid;
         justify-items: center;
         align-items: center;
