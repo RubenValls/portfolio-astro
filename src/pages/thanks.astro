@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ThanksBanner from "../assets/thanksBanner.png";
+import ResponseBanner from "../assets/responseBanner.png";
+import SocialButtons from "../components/SocialButtons.astro";
+---
+
+<Layout title="Thank You">
+    <main>
+        <div class="content">
+            <div class="thanks-container">
+                <img
+                    src={ThanksBanner}
+                    alt="Thanks Banner"
+                    class="thanks-image"
+                />
+                <img
+                    src={ResponseBanner}
+                    alt="Response Banner"
+                    class="thanks-image"
+                />
+            </div>
+            <div class="buttons-container">
+                <SocialButtons thanks={true} />
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    body {
+        background-color: #f6f6f6;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .thanks-container {
+        padding-top: 50px;
+        padding-bottom: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .thanks-image {
+        object-fit: cover;
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        border-radius: 5px;
+    }
+
+    .buttons-container {
+        padding-bottom: 20px;
+    }
+
+    @media only screen and (min-width: 1850px) {
+        .thanks-image {
+            width: 900px;
+        }
+    }
+
+    @media only screen and (max-width: 1850px) {
+        .thanks-image {
+            width: 100%;
+        }
+        .content {
+            right: 50%;
+            bottom: 50%;
+            transform: translate(50%, 50%);
+            position: absolute;
+        }
+    }
+</style>
