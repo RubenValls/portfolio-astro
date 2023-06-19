@@ -61,7 +61,7 @@ import SocialButtons from "../components/SocialButtons.astro";
         }
     }
 
-    @media only screen and (max-width: 1850px) {
+    @media only screen and (max-width: 1850px) and (min-width: 800px) {
         .thanks-image {
             width: 100%;
         }
@@ -70,6 +70,16 @@ import SocialButtons from "../components/SocialButtons.astro";
             bottom: 50%;
             transform: translate(50%, 50%);
             position: absolute;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        .thanks-image {
+            width: 400px;
+        }
+        .content{
+            position: absolute;
+            top: 20%;
         }
     }
 </style>
