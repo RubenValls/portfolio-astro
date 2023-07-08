@@ -4,16 +4,24 @@ import appleImg from "../assets/appleProject.png";
 import usersImg from "../assets/usersAppProject.png";
 import githubImg from "../assets/githubIcon.png";
 import mobxImg from "../assets/mobxProject.png";
-import weatherImg from "../assets/weatherProject.png";
+import lolProject from "../assets/lolProject.jpg";
 import titleImg from "../assets/projectsTitle.png";
 
 const projects = [
+    {
+        img: lolProject,
+        title: "LoL Champions",
+        description:
+            "Web application with Angular to observe League Of Legends' champions from the Riot Games API.",
+        github: "https://github.com/RubenValls/Weather-App_React",
+        demo: "https://league-of-legends-angular.vercel.app/",
+    },
     {
         img: votacionesImg,
         title: "Elecciones 23J",
         description:
             "Web application, developed with React, where users can view information related to elections and participate through voting.",
-        github: "https://github.com/RubenValls/votaciones23j-front",
+        github: "https://github.com/RubenValls/LeagueOfLegends-Angular",
         demo: "https://votaciones23j-front.vercel.app/",
     },
     {
@@ -39,14 +47,6 @@ const projects = [
             "State management using MobX to add, purchase, or discard products and obtain statistics related to these actions.",
         github: "https://github.com/RubenValls/shoppingCart-MobX-Pattern/",
         demo: "https://rubenvalls.github.io/shoppingCart-MobX-Pattern/",
-    },
-    {
-        img: weatherImg,
-        title: "WeatherApp",
-        description:
-            "Web application to learn about the weather conditions of a specific area along with the Google Maps map.",
-        github: "https://github.com/RubenValls/Weather-App_React",
-        demo: "https://rubenvalls.github.io/Weather-App_React/",
     },
 ];
 ---
